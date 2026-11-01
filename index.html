@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cooper 논문 10편 분석</title>
+<style>
+:root{--bg:#fafaf8;--fg:#1f2328;--mute:#5d6570;--card:#fff;--line:#dcdfe3;--acc:#1f6f6b;--warn:#8a5a00;--warnbg:#fff6e0;--obs:#4a3f8f;--obsbg:#efecfa}
+@media (prefers-color-scheme:dark){:root{--bg:#16181b;--fg:#e6e8ea;--mute:#9aa3ad;--card:#1e2125;--line:#34393f;--acc:#6cc4bd;--warn:#f0c46a;--warnbg:#2a2415;--obs:#b9aef0;--obsbg:#24213a}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.7 "Malgun Gothic",system-ui,sans-serif}
+main{max-width:1000px;margin:0 auto;padding:28px 16px 70px}
+h1{font-size:24px;margin:0 0 6px}
+h2{font-size:19px;margin:38px 0 10px;border-bottom:1px solid var(--line);padding-bottom:6px}
+h3{font-size:16.5px;margin:0 0 4px}
+p,li{margin:5px 0}
+ul{padding-left:20px;margin:6px 0}
+.sub{color:var(--mute);font-size:13.5px}
+.note{background:var(--warnbg);color:var(--warn);border-radius:8px;padding:10px 14px;margin:14px 0}
+.obs{background:var(--obsbg);color:var(--obs);border-radius:8px;padding:8px 12px;margin:10px 0;font-size:14px}
+.paper{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:18px 0}
+.meta{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 10px}
+.tag{font-size:12px;border:1px solid var(--line);border-radius:10px;padding:0 8px;color:var(--mute);white-space:nowrap}
+.tag.t{border-color:var(--acc);color:var(--acc)}
+dl{display:grid;grid-template-columns:96px 1fr;gap:6px 12px;margin:8px 0}
+dt{font-weight:bold;color:var(--mute);font-size:13.5px}
+dd{margin:0}
+.wrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%;min-width:640px;background:var(--card)}
+th,td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top;font-size:13.5px}
+th{background:var(--bg);white-space:nowrap}
+a{color:var(--acc)}
+@media (max-width:560px){dl{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<main>
+<h1>Cooper ID 논문 10편 개별 분석</h1>
+<p class="sub">University of Westminster 연구 그룹 · 원문은 Europe PMC 공개 전문(XML) · 작성일 2026-10-30 · 앞서 만든 <a href="isabella-cooper-papers.html">논문 목록</a>의 후속 자료</p>
+
+<div class="note"><b>읽는 방법.</b> 배지 <b>원문</b>은 논문에 적힌 내용이고, 보라색 상자의 <b>작성자 관찰</b>은 제가 논문들을 대조하며 본 의견입니다. 이번 분석은 <b>초록, 연구 설계·대상자, 한계·결론 부분</b>을 읽은 것입니다. 본문의 모든 표와 Figure, 참고문헌의 타당성은 검토하지 않았습니다. 특히 BMC Med 리뷰(약 12만 자)는 초록과 일부 구절만 읽었습니다. 이 분석은 의학적 조언이 아니며, 원문에서 확인되지 않는 내용은 적지 않았습니다.</div>
+
+<h2>0. 먼저 알아둘 점</h2>
+<ul>
+<li><b>실험 연구 4편은 같은 10명입니다.</b> 2023 IJMS, 2023 Front Endocrinol, 2024 Biomedicines Part 2, 2025 Front Nutr이 모두 "10명의 마른 건강한 폐경 전 여성(나이 32.3 ± 8.9, BMI 20.5 ± 1.4, 평균 3.9년 케토시스 유지)"을 대상으로 한 3단계 시험(21일씩)의 결과입니다. 네 논문을 합쳐 "4건의 연구"로 읽으면 안 됩니다.</li>
+<li><b>나머지는 대부분 가설·기전 제시형 논문입니다.</b> 2020 Open Heart는 원문이 스스로 "리뷰"로 분류했고 관리 전략이 이론적이라고 인정합니다. 2021 Biomedicines 2편과 2023 Antioxidants는 방법·결과 섹션이 없는 기전 논의 구조입니다. 2024 BMC Med는 전문가 합의에 기반한 연구 틀 제안입니다.</li>
+<li><b>인과 해석에 주의.</b> KetoSAge 시험은 대조군이 없고 비무작위·비눈가림(open-label)이며, 케토시스를 억제하는 방법이 "탄수화물을 영국 권고식으로 되돌리는 것"이라 여러 요인(탄수화물, 체중, 칼로리 등)이 한꺼번에 바뀝니다.</li>
+</ul>
+
+<h2>1. 한눈에 보기</h2>
+<div class="wrap">
+<table>
+<thead><tr><th>#</th><th>연도·저널</th><th>유형</th><th>자료 기반</th><th>근거 수준(제 평가)</th></tr></thead>
+<tbody>
+<tr><td>A</td><td>2025 Front Nutr</td><td>개입 시험 (KetoSAge 코호트)</td><td>10명, 3×21일</td><td>낮음~중간 (소규모·비무작위)</td></tr>
+<tr><td>B</td><td>2024 Biomedicines</td><td>개입 시험 (KetoSAge Part 2)</td><td>같은 10명</td><td>낮음~중간</td></tr>
+<tr><td>C</td><td>2024 BMC Med</td><td>전문가 합의 기반 연구 틀 (리뷰)</td><td>문헌·전문가 의견</td><td>가설·제안 (효과 검증 아님)</td></tr>
+<tr><td>D</td><td>2023 Front Endocrinol</td><td>같은 코호트의 2차 분석</td><td>같은 10명</td><td>탐색적</td></tr>
+<tr><td>E</td><td>2023 IJMS</td><td>개입 시험 (KetoSAge 1편)</td><td>같은 10명</td><td>낮음~중간</td></tr>
+<tr><td>F</td><td>2023 Antioxidants</td><td>기전 리뷰</td><td>문헌</td><td>가설</td></tr>
+<tr><td>G</td><td>2021 Front Physiol</td><td>예비 실험 연구</td><td>남성 12명</td><td>낮음 (파일럿)</td></tr>
+<tr><td>H</td><td>2021 Biomedicines</td><td>기전 리뷰 (골절)</td><td>문헌</td><td>가설</td></tr>
+<tr><td>I</td><td>2021 Biomedicines</td><td>기전 리뷰 (대사 표현형)</td><td>문헌</td><td>가설</td></tr>
+<tr><td>J</td><td>2020 Open Heart</td><td>이론적 관리 제안 (리뷰)</td><td>문헌·기전 추론</td><td>가설</td></tr>
+</tbody>
+</table>
+</div>
+<p class="sub">"근거 수준"은 설계만 보고 제가 매긴 대략적 구분이며 공식 등급(GRADE 등)이 아닙니다.</p>
+
+<h2>2. 논문별 분석</h2>
+
+<!-- A -->
+<div class="paper" id="A">
+<h3>A. KetoSAge: 케톤증 억제가 SHBG·성호르몬에 미치는 영향 (2025)</h3>
+<div class="meta"><span class="tag t">개입 시험</span><span class="tag">Front Nutr</span><span class="tag">Cooper ID 제1저자</span><span class="tag">CC BY</span><span class="tag"><a href="https://doi.org/10.3389/fnut.2025.1731915">DOI</a></span></div>
+<dl>
+<dt>목적</dt><dd>케톤증을 억제(저케톤혈증)했을 때 여성 생식·내분비 지표, 특히 SHBG가 어떻게 달라지는지 확인. 원문</dd>
+<dt>설계·대상</dt><dd>마른 건강한 폐경 전 여성 10명(나이 32.30 ± 8.97, BMI 20.52 ± 1.39, 평균 3.9 ± 2.3년 영양적 케토시스). 3단계 개입 시험: 21일 케토시스 → 21일 케톤증 억제 → 21일 케토시스 복귀. 원문</dd>
+<dt>핵심 결과</dt><dd>
+<ul>
+<li>케톤증 억제 후 SHBG가 0.67배로 감소 (p = 0.0015). 원문 표기 "0.67-fold decrease"</li>
+<li>SHBG는 인슐린(p = 0.0010), HOMA-IR(p = 0.0012), GKI(p = 0.0183), 렙틴(p = 0.0016), IGF-1(p = 0.0172), 유리 T3(p = 0.0001), GGT(p = 0.0024)와 <b>역상관</b>, GLP-1과는 정상관(p = 0.0295)</li>
+<li>FSH는 월경 주기 단계의 유의한 예측 인자 (배란기 &gt; 난포기, p = 0.0097)</li>
+</ul></dd>
+<dt>한계(원문)</dt><dd>공복 혈당·인슐린 지표의 한계를 논의하고, 월경 주기에 따른 더 포괄적인 분석은 후속 논문에서 하겠다고 기술. 검정력·표본수 산정은 이전 논문에 수록되어 있다고 적음.</dd>
+</dl>
+<div class="obs"><b>작성자 관찰</b> · 원문 초록은 "암 예방·치료에 대한 함의"까지 논의한다고 하지만, 이 데이터는 암 결과를 측정한 것이 아닙니다. 건강한 10명의 SHBG 변화에서 암 위험을 말하는 부분은 추론입니다.</div>
+</div>
+
+<!-- B -->
+<div class="paper" id="B">
+<h3>B. KetoSAge Part 2: HOMA-IR, 렙틴, 오스테오칼신, GLP-1 (2024)</h3>
+<div class="meta"><span class="tag t">개입 시험</span><span class="tag">Biomedicines</span><span class="tag">제1저자</span><span class="tag">CC BY</span><span class="tag"><a href="https://doi.org/10.3390/biomedicines12071553">DOI</a></span></div>
+<dl>
+<dt>목적</dt><dd>장기 케토시스 여성에서 케톤증 억제가 노화 관련 지표(HOMA-IR, 렙틴, 오스테오칼신, GLP-1 등)에 미치는 영향 확인. 원문</dd>
+<dt>설계·대상</dt><dd>같은 10명. "open-labelled, non-randomised cross-over trial", 21일 3단계. 검사는 22·44·66일 오전 8시, 12시간 공복 후. 탈락자 없음. 원문</dd>
+<dt>핵심 결과</dt><dd>
+<ul>
+<li>증가: 인슐린 1.83배(p = 0.0006), 포도당 1.17배(p = 0.0088), HOMA-IR 2.13배(p = 0.0008), 렙틴 3.35배(p = 0.0010), 총 오스테오칼신 1.63배(p = 0.0138), 비카르복실화 오스테오칼신 1.98배(p = 0.0417)</li>
+<li>감소: β-하이드록시부티레이트(BHB) 13.50배(p = 0.0012), GLP-1 2.40배(p = 0.0209)</li>
+<li>모든 지표가 3단계(케토시스 복귀)에서 기저치로 돌아옴. 글루카곤은 측정 불가(민감도 낮은 검사법) 원문</li>
+</ul></dd>
+<dt>한계(원문)</dt><dd>대규모·다양한 연령·병적 상태에서의 후속 연구가 필요함. 글루카곤 미측정. 자세한 장단점은 이전 논문(E)에 있다고 안내.</dd>
+</dl>
+<div class="obs"><b>작성자 관찰</b> · 같은 코호트의 E 논문은 인슐린을 "1.78배(p = 0.0002)"로, 이 논문은 "1.83배(p = 0.0006)"로 보고합니다. 분석 방법이 다른 것일 수 있으나 두 논문 어디에도 그 차이를 설명하는 문장을 제가 찾지 못했습니다. 인용 시 어느 논문의 수치인지 구분하세요.</div>
+</div>
+
+<!-- C -->
+<div class="paper" id="C">
+<h3>C. 교모세포종에 대한 케토제닉 대사요법 임상연구 틀 제안 (2024)</h3>
+<div class="meta"><span class="tag t">리뷰·합의 제안</span><span class="tag">BMC Med</span><span class="tag">공저자(저자 다수)</span><span class="tag">CC BY</span><span class="tag">인용 50</span><span class="tag"><a href="https://doi.org/10.1186/s12916-024-03775-4">DOI</a></span></div>
+<dl>
+<dt>목적</dt><dd>교모세포종(GBM) 세포가 포도당과 글루타민에 의존한다는 대사 모델을 바탕으로, 두 연료를 동시에 겨냥하는 케토제닉 대사요법(KMT) 합의 프로토콜 제시. 원문</dd>
+<dt>내용</dt><dd>GKI(포도당-케톤 지수)를 준수 지표로 삼은 케토제닉 식단·열량 제한·단식, 해당과정·글루타미노분해 억제제 병용, 타임라인별 단계(진단, 혈액 검사, 수술, 방사선, 약물, 운동 등), 임상시험 설계 시 주의점. 원문 섹션 구성</dd>
+<dt>근거 성격</dt><dd>원문이 "이전 전임상·번역 연구자와 임상의의 전문가 의견을 종합해 구성했다"고 밝힘.</dd>
+<dt>한계</dt><dd>치료 효과를 입증한 데이터가 아니라 <b>향후 연구를 위한 제안</b>임. 일부 약물(예: DON)은 FDA 미승인이며 과거 임상에서 용량 제한 부작용이 보고되었다고 원문이 기술.</dd>
+</dl>
+<div class="obs"><b>작성자 관찰</b> · 저자 수가 매우 많아 Cooper의 구체적 기여 범위는 이번에 확인하지 못했습니다(기여 섹션은 읽지 않음). 환자에게 적용하는 지침으로 읽으면 안 되며, 암 치료는 의료진과 논의할 사안입니다.</div>
+</div>
+
+<!-- D -->
+<div class="paper" id="D">
+<h3>D. 마른 여성의 케토제닉 식단 중 LDL-콜레스테롤 변화 예측 요인 (2023)</h3>
+<div class="meta"><span class="tag t">2차 분석</span><span class="tag">Front Endocrinol</span><span class="tag">제1저자</span><span class="tag">CC BY</span><span class="tag"><a href="https://doi.org/10.3389/fendo.2023.1326768">DOI</a></span></div>
+<dl>
+<dt>목적</dt><dd>체형·에너지 대사 지표가 탄수화물 제한 중 LDL-C 변화를 예측하는지 검증(지질-에너지 모델 LEM 검증). 원문</dd>
+<dt>설계·대상</dt><dd>같은 10명(케토제닉 식단 ≥ 6개월), 3단계 교차, 선형 혼합효과 모형으로 분석. 원문</dd>
+<dt>핵심 결과</dt><dd>
+<ul>
+<li>체성분 지표 전부와 유리 T3, 총 T4가 LDL-C 변화와 유의하게 관련. BMI와 유리 T3는 상호작용하는 독립 예측 인자</li>
+<li>포화지방, HOMA-IR, 렙틴, 아디포넥틴, TSH, rT3는 LDL-C 변화와 관련 없음 원문</li>
+</ul></dd>
+<dt>한계(원문)</dt><dd>표본수는 인슐린·IGF-1 기준으로 산정되어 LDL-C가 일차 평가변수가 아님. 각 단계 21일은 LDL-C가 기저(상승) 수준으로 돌아가기에 충분하지 않았음. 음성 결과는 경계 유의성이 아니므로 검정력 부족 때문일 가능성이 낮다는 것이 저자의 해석.</dd>
+</dl>
+<div class="obs"><b>작성자 관찰</b> · 10명 대상이라 "포화지방은 LDL-C와 무관하다"를 일반 인구로 확대하기는 어렵습니다. 대상은 마른 여성이라는 매우 특정한 집단입니다.</div>
+</div>
+
+<!-- E -->
+<div class="paper" id="E">
+<h3>E. KetoSAge: 장기 케토 적응 비운동선수 여성에서의 케톤증 억제 (2023)</h3>
+<div class="meta"><span class="tag t">개입 시험</span><span class="tag">Int J Mol Sci</span><span class="tag">제1저자</span><span class="tag">CC BY</span><span class="tag"><a href="https://doi.org/10.3390/ijms242115621">DOI</a></span></div>
+<dl>
+<dt>목적</dt><dd>기존 케토시스 연구가 단기·남성 운동선수·체중 감량에 치중되어 있어, 장기 케토시스 건강한 여성에서 단기 케톤증 억제의 영향을 확인. 원문</dd>
+<dt>설계·대상</dt><dd>같은 10명, 21일 3단계. 비무작위·비눈가림 교차. 케토시스 유지 기준은 모세혈관 BHB ≥ 0.5 mmol/L, 억제 단계 목표는 &lt; 0.3 mmol/L. 억제 단계 식단은 영국 Eatwell 권고(탄수화물:단백질:지방 = 55:20:25). 원문</dd>
+<dt>핵심 결과</dt><dd>
+<ul>
+<li>인슐린 1.78배: 33.60 (± 8.63) → 59.80 (± 14.69) pmol/L (p = 0.0002)</li>
+<li>IGF-1 1.83배: 149.30 (± 32.96) → 273.40 (± 85.66) µg/L (p = 0.0045)</li>
+<li>포도당 1.17배: 78.6 → 92.2 mg/dL (p = 0.0088), RQ 0.66 → 0.72 (p = 0.0427), PAI-1 13.34 → 16.69 ng/mL (p = 0.0428)</li>
+<li>VEGF, EGF, 단핵구 화학주성 단백질(MCP-1)도 유의하게 증가해 "염증 쪽으로의 이동"이라고 해석 원문</li>
+<li>섹션 제목에 "케톤증 억제가 BMI와 체지방을 증가시킨다"가 있음(수치는 이 분석에서 확인하지 않음)</li>
+</ul></dd>
+<dt>한계(원문)</dt><dd>표본수는 인슐린과 IGF-1로만 산정. 사이토카인·성장인자의 경계 유의 결과는 검정력 부족 가능성이 있다고 인정. 연령대·병적 상태 비교 연구가 필요하다고 기술.</dd>
+</dl>
+<div class="obs"><b>작성자 관찰</b> · 초록의 BHB 단위가 "pmol/L"로 적혀 있으나 방법 섹션은 mmol/L입니다. 오타로 보이지만 원문 그대로 둡니다. 또 저자들은 "다중 비교 보정 p값을 통과해 충분한 검정력이 있다"고 하지만, 보정 후에도 10명이라는 규모와 대조군 부재는 그대로입니다.</div>
+</div>
+
+<!-- F -->
+<div class="paper" id="F">
+<h3>F. 바이오해킹으로 건강수명 극대화: 대사 생화학의 활용 (2023)</h3>
+<div class="meta"><span class="tag t">기전 리뷰</span><span class="tag">Antioxidants</span><span class="tag">제1저자</span><span class="tag">CC BY</span><span class="tag"><a href="https://doi.org/10.3390/antiox12091749">DOI</a></span></div>
+<dl>
+<dt>주장</dt><dd>고인슐린혈증이 포도당 연료 사용을 강제해(포도당 → 아세틸 2개 생성에 NAD+ 4개 소비) 항산화·미토콘드리아 기능을 떨어뜨리고, 케톤체(BHB) 생성이 NAD+를 보존해 산화 스트레스 관리를 돕는다는 기전 모델. 원문</dd>
+<dt>구성</dt><dd>세포 노화, 산화 스트레스, 미토콘드리아 호르메시스, 칼로리 제한·BHB·저인슐린과 수명, 에너지 상태 감지, 고인슐린혈증, 행동 적용. 방법·결과 섹션 없음.</dd>
+<dt>한계</dt><dd>한계 섹션이 없고, 새 데이터를 제시하지 않는 논의형 논문입니다.</dd>
+</dl>
+<div class="obs"><b>작성자 관찰</b> · "수명 연장" 관련 문장은 사람 대상 장기 추적이 아니라 기전 추론입니다. 콘텐츠로 옮길 때는 "가설"이라고 명시하는 것이 안전합니다.</div>
+</div>
+
+<!-- G -->
+<div class="paper" id="G">
+<h3>G. 운동 유발 근손상 후 전신 세포외소포(EV) 방출 예비 연구 (2021)</h3>
+<div class="meta"><span class="tag t">예비 실험</span><span class="tag">Front Physiol</span><span class="tag">Cooper I 2번째 저자</span><span class="tag">CC BY</span><span class="tag">인용 18</span><span class="tag"><a href="https://doi.org/10.3389/fphys.2021.723931">DOI</a></span></div>
+<dl>
+<dt>목적</dt><dd>편심성 운동으로 인한 근손상(EIMD) 후 혈장 EV가 어떻게 변하는지, 젊은 층과 노인에서 차이가 있는지 확인. 원문</dd>
+<dt>설계·대상</dt><dd>건강하고 신체 활동이 있는 남성 12명(젊은 7명 27.0 ± 1.5세, 노인 5명 63.0 ± 1.0세). 편측 고강도 편심성 레그프레스(1RM의 120%, 7세트 × 10회). 운동 전·직후·1~72시간 후 채혈과 근력(MVIC)·근육통(DOMS) 측정. 원문</dd>
+<dt>핵심 결과</dt><dd>
+<ul>
+<li>EIMD는 EV 수와 최빈 크기를 의미 있게 바꾸지 못함 (시간 효과 p = 0.074, 크기 p = 0.309 등)</li>
+<li>CK(근손상 표지자)는 시간에 따라 변함 (p = 0.026). 운동 직후 EV 변화량(ΔCount, ΔMode)은 CK 활성과 <b>음의 상관</b></li>
+<li>MVIC는 젊은 군이 전반적으로 높음 (그룹 p &lt; 0.001). EV 수는 노인에서 휴식 시 낮은 경향 (p = 0.056) 원문</li>
+</ul></dd>
+<dt>한계(원문)</dt><dd>표본이 작고 활동량이 많은 자원자만 포함하여 일반 인구를 대표하지 못함. 향후 연구에는 EV 크기 기준 그룹당 398명, EV 수 기준 57명이 필요하다고 계산. EV 내용물(cargo) 분석은 이번에 하지 않음.</dd>
+</dl>
+<div class="obs"><b>작성자 관찰</b> · 케토제닉 주제와는 별개의 연구이며 Cooper는 제1저자가 아닙니다(1저자는 Kyriakidou Y). 결론의 "EV가 근손상을 예측할 수 있다"는 주 효과가 비유의한 상태에서 상관에 기대고 있어 파일럿 수준의 시사점으로 읽는 것이 맞습니다.</div>
+</div>
+
+<!-- H -->
+<div class="paper" id="H">
+<h3>H. 제2형 당뇨의 취약성 골절: 고인슐린혈증과 "osteofragilitas" (2021)</h3>
+<div class="meta"><span class="tag t">기전 리뷰</span><span class="tag">Biomedicines</span><span class="tag">제1저자</span><span class="tag">CC BY</span><span class="tag">인용 20</span><span class="tag"><a href="https://doi.org/10.3390/biomedicines9091165">DOI</a></span></div>
+<dl>
+<dt>주장</dt><dd>T2DM·CVD 환자는 골밀도(BMD)가 정상~높아도 골절이 늘어나는데, 고인슐린혈증이 골세포(osteocyte) 기능과 오스테오칼신 합성을 떨어뜨려 뼈의 질을 해친다는 가설. 마그네슘·비타민 D·비타민 K의 역할을 포함. 탄수화물 제한·단식·케토시스가 이를 완화한다고 제안. 원문</dd>
+<dt>임상 제안</dt><dd>골절이 있으나 BMD가 정상인 환자는 T2DM과 고인슐린혈증을 조사해야 한다고 권고. 원문</dd>
+<dt>한계</dt><dd>데이터를 새로 수집한 연구가 아님. 한계 섹션 없음.</dd>
+</dl>
+<div class="obs"><b>작성자 관찰</b> · 골절 예방이나 치료 효과를 사람에게서 검증한 데이터는 이 논문에 없습니다. 임상 권고(BMD 정상 골절 환자의 T2DM 조사)도 저자의 제안 수준입니다.</div>
+</div>
+
+<!-- I -->
+<div class="paper" id="I">
+<h3>I. 대사 표현형과 제2형 당뇨의 단계적 진행: 새로운 패러다임 (2021)</h3>
+<div class="meta"><span class="tag t">기전 리뷰</span><span class="tag">Biomedicines</span><span class="tag">제1저자</span><span class="tag">CC BY</span><span class="tag">인용 16</span><span class="tag"><a href="https://doi.org/10.3390/biomedicines9070800">DOI</a></span></div>
+<dl>
+<dt>주장</dt><dd>기저 인슐린 분비 기전은 잘 알려지지 않았다는 전제 아래, <b>인슐린의 주된 역할이 BHB 합성 조절</b>이고 뼈(오스테오칼신)가 포도당 흡수 민감도를 조절한다는 대안 가설을 제시. 건강한 습관적 케토시스인 사람은 T2DM 환자보다 글루카곤·인슐린이 낮다고 기술. 원문</dd>
+<dt>임상 함의(원문)</dt><dd>대사 건강의 정의에 BHB 존재를 포함해야 하며, 인슐린 수치를 직접 올리는 약제(설폰요소제, 외인성 인슐린)를 통한 엄격한 혈당 조절은 고인슐린혈증을 더 키울 수 있다고 주장. 탄수화물 제한을 고인슐린혈증의 1차 치료로 고려할 것을 제안.</dd>
+<dt>한계</dt><dd>새 데이터가 없는 가설 제시. 원문도 대사 표현형별 대사 프로파일 확인과 내인성 vs 외인성 BHB 비교가 추후 필요하다고 인정.</dd>
+</dl>
+<div class="obs"><b>작성자 관찰</b> · 당뇨 약물 처방과 관련된 부분은 가설이며, 환자가 임의로 약을 조절해서는 안 되는 영역입니다.</div>
+</div>
+
+<!-- J -->
+<div class="paper" id="J">
+<h3>J. 고인슐린혈증·마그네슘·비타민 D·혈전·COVID-19: 임상 관리의 근거 (2020)</h3>
+<div class="meta"><span class="tag t">이론적 리뷰</span><span class="tag">Open Heart</span><span class="tag">제1저자</span><span class="tag">CC BY-NC</span><span class="tag">인용 57</span><span class="tag"><a href="https://doi.org/10.1136/openhrt-2020-001356">DOI</a></span></div>
+<dl>
+<dt>주장</dt><dd>비만·T2DM·CVD·고혈압 등 COVID-19 위험 요인의 공통 분모를 고인슐린혈증으로 보고, 마그네슘 고갈·비타민 D 저하·혈전 형성으로 이어지는 기전을 제시. 원문</dd>
+<dt>제안</dt><dd>고혈당·고인슐린혈증으로 입원한 COVID-19 환자는 정제 탄수화물을 제한하고, 포도당 정맥주사를 줄이며, 혈당·인슐린·케톤을 연속 측정하고, 비타민 D·마그네슘·아연을 보충하자는 관리 알고리즘. 원문</dd>
+<dt>한계(원문)</dt><dd>입원 시 단일 공복 검사로는 고인슐린혈증을 놓칠 수 있고, 식후 동적 검사가 필요하다고 기술. 또한 <b>제안한 관리 전략은 생화학 원리에 기반한 이론적인 것</b>이라고 스스로 명시함.</dd>
+</dl>
+<div class="obs"><b>작성자 관찰</b> · 이 논문은 COVID-19 환자에게 이 방법이 효과가 있다는 임상 결과를 보고하지 않습니다. 인용 57회는 높은 편이지만, 인용 수가 효과를 입증하는 것은 아닙니다. CC BY-NC라 상업적 재사용은 제한됩니다.</div>
+</div>
+
+<h2>3. KetoSAge 코호트 4편: 보고된 지표 비교</h2>
+<p>아래는 같은 10명에 대한 4편이 각각 초점을 둔 결과입니다(모두 케톤증 억제 단계 대비, 원문 표기 그대로). 중복 보고를 한곳에 모았습니다.</p>
+<div class="wrap">
+<table>
+<thead><tr><th>지표</th><th>변화(원문 표기)</th><th>p</th><th>출처</th></tr></thead>
+<tbody>
+<tr><td>인슐린</td><td>1.78배 증가 (33.60 → 59.80 pmol/L)</td><td>0.0002</td><td>E</td></tr>
+<tr><td>인슐린</td><td>1.83배 증가</td><td>0.0006</td><td>B</td></tr>
+<tr><td>IGF-1</td><td>1.83배 증가 (149.30 → 273.40 µg/L)</td><td>0.0045</td><td>E</td></tr>
+<tr><td>포도당</td><td>1.17배 증가</td><td>0.0088</td><td>B·E 동일</td></tr>
+<tr><td>HOMA-IR</td><td>2.13배 증가</td><td>0.0008</td><td>B</td></tr>
+<tr><td>렙틴</td><td>3.35배 증가</td><td>0.0010</td><td>B</td></tr>
+<tr><td>총 오스테오칼신 / 비카르복실화</td><td>1.63배 / 1.98배 증가</td><td>0.0138 / 0.0417</td><td>B</td></tr>
+<tr><td>BHB</td><td>13.50배 감소</td><td>0.0012</td><td>B</td></tr>
+<tr><td>GLP-1</td><td>2.40배 감소</td><td>0.0209</td><td>B</td></tr>
+<tr><td>SHBG</td><td>0.67배로 감소 (원문 "0.67-fold decrease")</td><td>0.0015</td><td>A</td></tr>
+<tr><td>LDL-C 변화 예측</td><td>BMI·유리 T3·총 T4는 관련, 포화지방은 무관</td><td>—</td><td>D</td></tr>
+</tbody>
+</table>
+</div>
+<div class="obs"><b>작성자 관찰</b> · 인슐린 수치가 B와 E에서 서로 다르게 보고됩니다(위 표). 또한 "감소"를 나타내는 배수 표기("13.50-fold decrease", "0.67-fold decrease")는 논문마다 표기 방식이 달라 보여, 정확한 감소율은 원문 표를 확인해야 합니다.</div>
+
+<h2>4. 공통 한계와 종합</h2>
+<ul>
+<li><b>표본 크기:</b> 개입 시험은 모두 10명(여성), 예비 연구는 12명(남성). 일반화에 한계가 큼.</li>
+<li><b>대조군·무작위 부재:</b> KetoSAge는 한 사람이 세 단계를 모두 거치는 비무작위 교차입니다. 순서 효과(P1 → P2 → P3)와 계절·생활 변화를 통제하지 못합니다.</li>
+<li><b>억제 방법의 혼재:</b> 케톤증 억제가 곧 "탄수화물 대폭 증가"이므로 BHB 자체의 효과와 식이 구성의 효과를 분리할 수 없습니다.</li>
+<li><b>저자의 해석 수위:</b> 실험 논문에서도 결론이 "건강수명·암 위험" 같은 장기 결과로 확장되는데, 측정한 것은 21일 후의 혈액 지표입니다.</li>
+<li><b>이해충돌:</b> 각 논문의 이해충돌·재정 지원 항목은 이번에 확인하지 않았습니다.</li>
+</ul>
+
+<h2>5. 콘텐츠로 쓸 때 안전한 표현</h2>
+<ul>
+<li>가능: "10명의 마른 여성을 대상으로 한 소규모 비무작위 시험에서, 3주간 탄수화물을 늘려 케톤이 낮아지자 인슐린·렙틴·HOMA-IR이 증가했고 다시 케토시스로 돌아오자 기저치로 회복했다."</li>
+<li>가능: "저자들은 고인슐린혈증이 여러 만성질환의 공통 기전이라는 가설을 제안한다."</li>
+<li>피해야 함: "케토제닉 식단이 수명을 늘린다", "COVID-19 환자에게 효과가 입증되었다", "암을 치료한다", "당뇨약을 줄여야 한다". 이 논문들로는 근거가 없습니다.</li>
+<li>같은 10명의 결과를 4편으로 소개할 때는 반드시 같은 코호트라고 밝힐 것.</li>
+</ul>
+
+<h2>6. 검토 범위</h2>
+<ul>
+<li>10편 모두 Europe PMC 공개 전문 XML을 받았고, 초록·연구 설계·대상자·한계·결론 부분을 읽었습니다.</li>
+<li>읽지 않은 것: 본문의 전체 결과 표와 Figure, 보충 자료, 참고문헌의 적합성, 이해충돌·재정 지원 항목. BMC Med 논문(C)은 대부분 건너뛰었습니다.</li>
+<li>제1저자·공저자 위치와 소속은 앞선 목록 작업에서 확인한 서지 정보에 근거합니다. 이름 전체(Isabella D. Cooper)와 학위는 확인하지 못했습니다.</li>
+</ul>
+</main>
+</body>
+</html>
